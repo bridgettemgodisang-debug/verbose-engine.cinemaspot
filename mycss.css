@@ -1,0 +1,110 @@
+/* Base Reset*/
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #ffe6f2, #e6f7ff); /* pink + light blue gradient */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation*/
+header.site {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 182, 193, 0.9); /* light pink */
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid #ff66b2; /* hot pink */
+  z-index: 50;
+}
+
+.nav a {
+  color: #4b0082; /* deep purple */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.nav a:hover,
+.nav a.active {
+  color: #ff66b2; /* hot pink highlight */
+}
+
+/* Cards */
+.card {
+  background: #fff0f5; /* lavender blush */
+  border: 2px solid #ffb6c1; /* light pink border */
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.3); /* pink shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 191, 255, 0.4); /* teal glow */
+}
+
+/* Buttons */
+.button {
+  background: #ff66b2; /* hot pink */
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: #ff1493; /* deeper pink */
+}
+
+.button.secondary {
+  background: #40e0d0; /* turquoise */
+  color: #fff;
+  border: none;
+}
+.button.secondary:hover {
+  background: #00ced1; /* darker teal */
+}
+.responsive-img {
+  width: 350px;   /* fixed width */
+  height: 250px;   /* keeps proportions */
+  display: block;
+  margin: 20px auto; /* centers img */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.3);
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;   /* centers the video */
+  border-radius: 12px; /* rounded corners */
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.3); /* glow effect */
+}
+
+.figure:hover, .profile-pic:hover {
+  transform: scale(1.08) rotate(1deg);
+  filter: saturate(120%);
+}
+
+/* Section Titles */
+h2, h3 {
+  color: #4b0082; /* deep purple */
+  text-shadow: 2px 2px #ffb6c1; /* pink shadow */
+}
+.social-icons a i {
+  font-size: 3rem;   /* bigger size */
+  margin: 0 10px;
+  color: hotpink;
+}
+
+/* Footer */
+footer.site {
+  background: #ffb6c1;
+  border-top: 3px solid #ff66b2;
+  padding: 18px 24px;
+  color: #4b0082;
+  text-align: center;
+}
+footer a {
+  color: #00ced1; /* teal links */
+}

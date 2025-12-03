@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cinema Spotlight</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Base Reset*/
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #ffe6f2, #e6f7ff); /* pink + light blue gradient */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation*/
+header.site {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 182, 193, 0.9); /* light pink */
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid #ff66b2; /* hot pink */
+  z-index: 50;
+}
+
+.nav a {
+  color: #4b0082; /* deep purple */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.nav a:hover,
+.nav a.active {
+  color: #ff66b2; /* hot pink highlight */
+}
+
+/* Cards */
+.card {
+  background: #fff0f5; /* lavender blush */
+  border: 2px solid #ffb6c1; /* light pink border */
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.3); /* pink shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 191, 255, 0.4); /* teal glow */
+}
+
+/* Buttons */
+.button {
+  background: #ff66b2; /* hot pink */
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: #ff1493; /* deeper pink */
+}
+
+.button.secondary {
+  background: #40e0d0; /* turquoise */
+  color: #fff;
+  border: none;
+}
+.button.secondary:hover {
+  background: #00ced1; /* darker teal */
+}
+.responsive-img {
+  width: 350px;   /* fixed width */
+  height: 250px;   /* keeps proportions */
+  display: block;
+  margin: 20px auto; /* centers img */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.3);
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;   /* centers the video */
+  border-radius: 12px; /* rounded corners */
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.3); /* glow effect */
+}
+
+.figure:hover, .profile-pic:hover {
+  transform: scale(1.08) rotate(1deg);
+  filter: saturate(120%);
+}
+
+/* Section Titles */
+h2, h3 {
+  color: #4b0082; /* deep purple */
+  text-shadow: 2px 2px #ffb6c1; /* pink shadow */
+}
+.social-icons a i {
+  font-size: 3rem;   /* bigger size */
+  margin: 0 10px;
+  color: hotpink;
+}
+
+/* Footer */
+footer.site {
+  background: #ffb6c1;
+  border-top: 3px solid #ff66b2;
+  padding: 18px 24px;
+  color: #4b0082;
+  text-align: center;
+}
+footer a {
+  color: #00ced1; /* teal links */
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <nav class="nav container">
+      <div class="brand"><h1>Cinema <span>Spotlight</span></h1></div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#directors">Directors</a></li>
+        <li><a href="#films">Films & Images</a></li>
+        <li><a href="#impact">Cultural Impact</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section id="objectives" class="container section">
+  <h2>Our Objectives</h2>
+  <article class="card">
+    <p>
+      <strong>Cinema Spotlight</strong> is dedicated to celebrating Black cinema. 
+      Our mission is to highlight the artistry, cultural impact, and social significance of films 
+      created by Black directors and storytellers. Discover stories that inspire, challenge narratives and entertain. We aim to:
+    </p>
+    <ul>
+      <li><strong>Showcase Directors:</strong> Profile influential filmmakers like Ava DuVernay, Ryan Coogler, and Barry Jenkins, 
+          exploring their journeys and contributions.</li>
+      <li><strong>Showcase Films:</strong> Present summaries, trailers, and reviews of landmark films such as 
+          <em>Moonlight</em>, <em>Selma</em>, and <em>Black Panther</em>.</li>
+      <li><strong>Explore their Cultural Impact:</strong> Reflect on how Black cinema shapes identity, challenges stereotypes, 
+          and influences global culture.</li>
+      <li><strong>Provide Resources:</strong> Connect visitors to external platforms (YouTube, Wikipedia, Spotify) for deeper 
+          exploration of interviews, histories, and soundtracks.</li>
+    </ul>
+    <p>
+      In short, Cinema Spotlight is both an archive and a conversation — a place where film, culture, 
+      and creativity meet to inspire future generations.
+    </p>
+  </article>
+</section>
+
+  <!-- Directors -->
+  <section id="directors" class="container section">
+    <h2>Profiles of Directors</h2>
+  <div class="grid">
+      <article class="card">
+        <iframe src="https://loetb-my.sharepoint.com/personal/2025bgodisang_loetbstudent_ie/_layouts/15/embed.aspx?UniqueId=93edd7c4-590d-4181-9dd7-b208ed4ea23a" 
+              alt="Ava DuVernay Awards" 
+                 class="responsive-img"></iframe>
+        <h3>Ava DuVernay</h3>
+         <p>
+        <strong>Born:</strong> August 24, 1972 in Long Beach, California, U.S.<br>
+    <strong>Career Start:</strong> Ava began in film publicity and marketing before directing her debut feature 
+    <em>I Will Follow</em> (2010). Won the Sundance directing award for <em>Middle of Nowhere</em> (2012), 
+    becoming the first Black woman to do so.<br>
+    <strong>Why Film:</strong> Initially interested in journalism, she shifted to filmmaking after realizing 
+    the power of storytelling to highlight social justice and Black experiences. Her work often explores 
+    race, identity, and systemic injustice.
+  </p>
+      </article>
+      <article class="card">
+        <iframe src="https://loetb-my.sharepoint.com/personal/2025bgodisang_loetbstudent_ie/_layouts/15/embed.aspx?UniqueId=5d068846-c341-4df9-91c5-12d2b2cd724e" 
+		       alt="ryan coogler"
+			   class="responsive-img"></iframe>
+        <h3>Ryan Coogler</h3>
+        <p><strong>Born:</strong> May 23, 1986 in Oakland, California, U.S.<br>
+    <strong>Career Start:</strong> Directed short films at USC before his breakout debut feature 
+    <em>Fruitvale Station</em> (2013). Later directed <em>Creed</em> (2015) and Marvel’s 
+    <em>Black Panther</em> (2018).<br>
+    <strong>Why Film:</strong> Coogler studied film after initially pursuing athletics and science. 
+    He was drawn to cinema as a way to tell stories about underrepresented communities, blending 
+    emotional depth with mainstream appeal. His films often highlight social issues while remaining 
+    commercially successful.
+  </p>
+      </article>
+    <article class="card">
+      <iframe src="https://loetb-my.sharepoint.com/personal/2025bgodisang_loetbstudent_ie/_layouts/15/embed.aspx?UniqueId=c9f7a5b2-3b12-4676-adc5-025d5d158138" 
+	          alt="barry jenkins. jpg"
+			  class="responsive-img"></iframe>
+      <h3>Barry Jenkins</h3>
+      <p><strong>Born:</strong> November 19, 1979 in Miami, Florida, U.S.<br>
+        <strong>Career Start:</strong> Directed his first feature <em>Medicine for Melancholy</em> (2008). 
+        Achieved global acclaim with <em>Moonlight</em> (2016), which won the Academy Award for Best Picture.<br>
+        <strong>Focus:</strong> Jenkins explores themes of identity, intimacy, and the Black experience, 
+        often using lyrical storytelling and visual poetry to capture emotional depth.
+      </p>
+  </div>
+  </section>
+
+  <!-- Films -->
+  <section id="films" class="container section">
+    <h2>Films & Images</h2>
+    <div class="grid">
+      <article class="card">
+        <iframe src="https://loetb-my.sharepoint.com/personal/2025bgodisang_loetbstudent_ie/_layouts/15/embed.aspx?UniqueId=53c05522-1f8a-464f-b001-3f9b82ce5c01" 
+		        alt="moonlight poster jpeg"
+				class="responsive-img"></iframe>
+        <h3>Moonlight (2016) </h3>
+        <p>The film follows Chiron, a young Black boy in Miami, as he comes of age across three defining chapters of his life. 
+		It portrays his search for identity and belonging while grappling with questions of masculinity, love, and acceptance. 
+		As Chiron faces family hardships and the weight of social expectations, the story reveals how the people around him and the environment he grows up in shape his journey of self‑discovery and growth.</p>
+      </article>
+	  
+      <article class="card">
+        <iframe src="https://loetb-my.sharepoint.com/personal/2025bgodisang_loetbstudent_ie/_layouts/15/embed.aspx?UniqueId=3dadbac7-126d-4f03-8d40-ad55dfbe7b4b" 
+		alt="selma-movie-poster"
+		class="responsive-img"></iframe>
+        <h3>Selma (2014) </h3>
+        <p>The film by Ava Duvernay, follows the life of Dr. Martin Lther King.
+		Although Black citizens in Alabama legally held the same voting rights as their white counterparts in 1965, 
+		discriminatory practices by local officials, politicians, and law enforcement blocked them from exercising those rights. 
+		In response, Dr. Martin Luther King Jr. and his supporters traveled to Selma, where they launched a series of non‑violent protests aimed at securing true equality at the ballot box for Black Americans.</p>
+      </article>
+	  
+      <article class="card">
+        <iframe src="https://loetb-my.sharepoint.com/personal/2025bgodisang_loetbstudent_ie/_layouts/15/embed.aspx?UniqueId=a776001c-c0ec-4c49-b041-bb4fc3c0f6e6" 
+		alt="Black panther movie post"
+		class="responsive-img"></iframe>
+        <h3>Black Panther (2018) </h3>
+        <p>This is a landmark Marvel film that combined superhero spectacle with deep cultural significance. 
+		   It was the first major blockbuster centered on a Black superhero, featuring a predominantly Black cast, and it became a global phenomenon for its representation, Afrofuturist vision, and themes of heritage, leadership, and identity</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Cultural Impact -->
+    <section id="impact" class="container section">
+  <h2>Cultural Impact</h2>
+  <article class="card">
+    <p>
+      Cinema has always been more than entertainment; it is a mirror reflecting society’s struggles, triumphs, and aspirations. 
+      In recent years, films such as <em>Moonlight</em> (2016), <em>Selma</em> (2014), <em>Get Out</em> (2017), and <em>Black Panther</em> (2018) 
+      have emerged as cultural landmarks, amplifying Black voices and reshaping the global narrative of representation in film. 
+      These works not only achieved critical and commercial success but also carried profound social significance, challenging stereotypes 
+      and opening space for new conversations about race, identity, and justice.
+    </p>
+
+    <p>
+      <strong>Barry Jenkins’s <em>Moonlight</em></strong> is a deeply intimate portrait of Chiron, a young Black man navigating childhood, 
+      adolescence, and adulthood in Miami. The film’s triptych structure captures the fragility of identity and the weight of masculinity, 
+      while also exploring sexuality and self-acceptance. Its quiet power lies in its refusal to sensationalize; instead, Jenkins uses lyrical 
+      imagery and silence to convey the unspoken pain of marginalization. Winning the Academy Award for Best Picture, <em>Moonlight</em> became 
+      the first film with an all-Black cast and a queer protagonist to receive Hollywood’s highest honor, a milestone that signaled a shift in 
+      whose stories are deemed worthy of recognition.
+    </p>
+
+    <p>
+      <strong>Ava DuVernay’s <em>Selma</em></strong> situates itself firmly in historical struggle. Chronicling the 1965 Selma to Montgomery marches 
+      led by Dr. Martin Luther King Jr., the film dramatizes the fight for voting rights against entrenched racism in Alabama. DuVernay’s direction 
+      emphasizes both the collective courage of activists and the systemic barriers they faced, from discriminatory registrars to violent law enforcement. 
+      Released during renewed debates about racial justice, <em>Selma</em> resonated as both a history lesson and a call to action, reminding audiences 
+      that the fight for equality is ongoing.
+    </p>
+
+    <p>
+      <strong>Jordan Peele’s <em>Get Out</em></strong> redefined horror by embedding racial critique within its chilling narrative. Following Chris, 
+      a young Black man visiting his white girlfriend’s family, the film exposes the insidious nature of liberal racism and exploitation. Peele’s genius 
+      lies in using genre conventions—suspense, paranoia, body horror—to dramatize the anxieties of Black existence in predominantly white spaces. 
+      The film sparked widespread discourse on race relations, privilege, and systemic oppression, proving that horror can be both entertaining and 
+      socially incisive. Its success, including an Academy Award for Best Original Screenplay, validated the idea that genre cinema can carry profound 
+      cultural weight.
+    </p>
+
+    <p>
+      <strong>Ryan Coogler’s <em>Black Panther</em></strong> shattered box office records while offering a vision of Afrofuturism that celebrated African 
+      heritage and innovation. Set in the fictional nation of Wakanda, the film presented a technologically advanced society untouched by colonialism, 
+      a radical reimagining of Africa’s place in global culture. With its predominantly Black cast and themes of leadership, diaspora, and responsibility, 
+      <em>Black Panther</em> became a cultural phenomenon, inspiring pride and sparking conversations about representation in mainstream media. Its Oscar 
+      nominations, including Best Picture, marked a watershed moment for superhero films and for Black storytelling in Hollywood.
+    </p>
+
+    <p>
+      Together, these films demonstrate the <strong>power of cinema to amplify marginalized voices</strong>. They challenge audiences to confront 
+      uncomfortable truths, whether about systemic racism, historical injustice, or the complexities of identity. They also prove that Black stories 
+      are not monolithic: <em>Moonlight</em> whispers of personal pain and resilience, <em>Selma</em> shouts of collective struggle, <em>Get Out</em> satirizes 
+      hidden prejudice, and <em>Black Panther</em> imagines a liberated future. Each contributes uniquely to a broader tapestry of representation, expanding 
+      the possibilities of what Black cinema can be.
+    </p>
+
+    <p>
+      The cultural significance of these works lies not only in their artistry but in their impact. They have inspired new generations of filmmakers, 
+      opened doors for diverse narratives, and reminded audiences worldwide that representation matters. By centering Black voices, they reclaim space 
+      in an industry that has long marginalized them, offering stories that are both universal and deeply rooted in specific cultural realities. 
+      In doing so, they affirm that cinema is not just about telling stories—it is about shaping the world we live in.
+    </p>
+  </article>
+</section>
+
+  <!-- Resources -->
+  <section id="resources" class="container section">
+    <h2>Resources</h2>
+    <div class="video-container">
+      <article class="card"><iframe title="vimeo-player" src="https://player.vimeo.com/video/198159776?h=69b305eb4f" width="640" height="360" frameborder="0" 
+	                          referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+	  </div>
+    <p>
+      Watch the official trailer for Barry Jenkins’ Academy Award-winning film <em>Moonlight</em>, 
+      exploring themes of identity, masculinity, and love.
+    </p></article>
+	
+	<div class="video-container">
+      <article class="card"><iframe title="vimeo-player" src="https://player.vimeo.com/video/733166954?h=014b8c3da3" width="640" height="360" frameborder="0" 
+	  referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+	  </div>
+    <p>
+      Watch the official trailer for Ryan Coogler’s Award-winning film <em>Black Panther</em>, 
+      exploring themes of anti-colonialism, the importance of representation, and the exploration of the African diaspora through the lens of belonging and identity
+    </p></article>
+	
+      <article class="card"><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></article>
+	 <p>
+	 <strong> Directors’ Portraits </strong><br>
+           Ava DuVernay –<a href="https://www.womenshistory.org/education-resources/biographies/ava-duvernay" target="_blank">Visit Ava's profile</a><br>
+
+           Ryan Coogler –<a href="https://www.themoviedb.org/person/1056121-ryan-coogler" target="_blank">Visit Ryan's profile</a><br>
+
+           Barry Jenkins –<a href="https://screendollars.com/celebrity/barry-jenkins/" target="_blank">Visit Barry's profile</a><br>
+
+      <strong> Film Posters </strong><br>
+           Moonlight (2016) – <a href="https://www.themoviedb.org/movie/376867-moonlight/images/posters" target="_blank">View the official Moonlight poster here</a><br>
+
+          Selma (2014) –<a href="https://www.themoviedb.org/movie/273895-selma/images/posters" target="_blank">View the official Selma poster here</a><br>
+
+          Black Panther (2018) –<a href="https://www.tribute.ca/posters/black-panther/121689/121054/" target="_blank">View the official Black Panther poster here</a><br>
+
+       <strong> Trailers </strong><br>
+          Moonlight – Official Trailer HD on Vimeo<br>
+
+          Selma – Selma teaser on Vimeo<br>
+		  
+      </P>
+    </div>
+  </section>
+
+  <section id="social" class="container section">
+  <h2>Connect With Us</h2>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="site">
+    <div class="footer-content container">
+      <strong>Cinema Spotlight</strong><br/>
+      Celebrating Black cinema through directors, films, and cultural impact.<br/>
+      © 2025 Cinema Spotlight
+    </div>
+  </footer>
+
+  <!-- Scroll reveal -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < triggerBottom) sec.classList.add("visible");
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>
